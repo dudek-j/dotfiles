@@ -107,3 +107,4 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 autoload -U promptinit; promptinit
 prompt pure
+export PATH="/usr/local/sbin:$PATH"
