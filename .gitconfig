@@ -1,0 +1,17 @@
+[user]
+	email = sidorio97@gmail.com
+	name = Jakub Dudek
+[core]
+	editor = code --wait
+	trustctime = true
+	excludesfile = /Users/duddan/.gitignore
+[diff]
+	tool = code
+[difftool]
+	prompt = false
+[difftool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[mergetool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
