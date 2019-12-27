@@ -36,5 +36,6 @@
   "sync.forceUpload": true,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
-  "terminal.integrated.fontFamily": "FiraCode-Retina"
+  "terminal.integrated.fontFamily": "FiraCode-Retina",
+  "vsicons.dontShowNewVersionMessage": true
 }
