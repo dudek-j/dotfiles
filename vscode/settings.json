@@ -37,5 +37,8 @@
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "FiraCode-Retina",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
