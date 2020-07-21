@@ -82,14 +82,14 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-alias sshdo='ssh root@178.128.33.13'
 alias gs='git status'
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='sudo htop'
-alias zshconfig="nano ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
+alias ls="ls -A"
 
 # User configuration
 
