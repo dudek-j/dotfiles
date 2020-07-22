@@ -89,7 +89,6 @@ alias top='sudo htop'
 alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
-alias ls="ls -A"
 
 # User configuration
 
