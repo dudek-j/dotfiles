@@ -82,6 +82,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export PATH=$PATH:$JAVA_HOME/bin
+
 alias gs='git status'
 alias cat='bat'
 alias ping='prettyping --nolegend'
