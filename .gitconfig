@@ -4,3 +4,5 @@
 [core]
 	excludesfile = /Users/duddan/.gitignore
 
+[alias]
+	amend = commit --amend 
