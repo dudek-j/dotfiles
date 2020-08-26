@@ -813,9 +813,13 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/Code/dotfiles/iterm2</string>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<true/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -858,11 +862,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>-1584 1644 799 448 0 0 1440 900 </string>
+	<string>1546 944 347 181 0 0 3440 1440 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1343 184 836 1046 0 0 3440 1440 </string>
+	<string>1721 393 836 1046 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>891 257 851 1046 0 0 3440 1440 </string>
+	<string>1470 238 851 1046 0 0 2560 1440 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>1506 394 851 1046 0 0 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_7430792E-4DD1-405B-8B3E-EFDA6B792B36</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_7430792E-4DD1-405B-8B3E-EFDA6B792B36_selection</key>
@@ -1750,30 +1758,26 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.12</string>
+		<string>3.3.11</string>
+		<string>3.3.10</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3440, 1440}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{701, 956}</string>
+		<string>{1076, 882}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
-	<string>BF1FD488-D7CC-4CBF-824B-7E9F205BA3D7</string>
-	<key>NoSyncLastTipTime</key>
-	<real>617397411.95217896</real>
+	<string>019F5642-2DE8-453F-8D7F-F1589C4EB3E5</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>28</integer>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>86</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>617483806.57246304</real>
+	<real>613984220.48876202</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -2124,7 +2128,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
+				<string>currentTab.currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2132,7 +2136,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalIconName</string>
+				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2263,6 +2267,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentSession.commandLine</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2295,6 +2307,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentSession.presentationName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2304,6 +2324,14 @@
 				<true/>
 				<key>name</key>
 				<string>iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2437,19 +2465,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -2480,12 +2508,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-	<real>617052799.58726394</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-	</array>
+	<real>613308370.751845</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2530,15 +2556,19 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=71</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=52</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-25T16:29:17Z</date>
+	<date>2020-08-19T07:21:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>ShowFullScreenTabBar</key>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3449770486</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SoundForEsc</key>
