@@ -863,14 +863,14 @@
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1546 944 347 181 0 0 3440 1440 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 493 620 392 0 0 1680 1050 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>853 844 735 382 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1721 393 836 1046 0 0 2560 1440 </string>
+	<string>1638 246 836 1046 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1470 238 851 1046 0 0 2560 1440 </string>
+	<string>891 257 851 1046 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1506 394 851 1046 0 0 2560 1440 </string>
+	<string>495 163 851 1046 0 0 3440 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_7430792E-4DD1-405B-8B3E-EFDA6B792B36</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_7430792E-4DD1-405B-8B3E-EFDA6B792B36_selection</key>
@@ -1187,7 +1187,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Recycle</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1752,7 +1752,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/duddan</string>
+			<string>/Users/duddan/</string>
 		</dict>
 	</array>
 	<key>NoSyncAllAppVersions</key>
@@ -1761,6 +1761,13 @@
 		<string>3.3.11</string>
 		<string>3.3.10</string>
 	</array>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {3440, 1440}}</string>
+		<key>topLeft</key>
+		<string>{1905, 955}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
@@ -2511,7 +2518,20 @@
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
+<<<<<<< Updated upstream
 	<real>613308370.751845</real>
+=======
+	<real>617052799.58726394</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>0003</string>
+		<string>0001</string>
+		<string>000</string>
+		<string>0002</string>
+		<string>0000</string>
+		<string>0003</string>
+	</array>
+>>>>>>> Stashed changes
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2560,7 +2580,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
+<<<<<<< Updated upstream
 	<date>2020-08-19T07:21:43Z</date>
+=======
+	<date>2020-08-05T19:38:39Z</date>
+>>>>>>> Stashed changes
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
