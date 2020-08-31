@@ -115,3 +115,4 @@ autoload -U promptinit; promptinit
 prompt pure
 export PATH="/usr/local/sbin:$PATH"
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh

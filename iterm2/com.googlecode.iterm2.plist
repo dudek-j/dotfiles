@@ -14,6 +14,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>BracketedPasteMode</key>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>One Dark</key>
@@ -866,7 +868,7 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>853 844 735 382 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1638 246 836 1046 0 0 3440 1440 </string>
+	<string>842 0 836 1050 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>891 257 851 1046 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1758,8 +1760,6 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.12</string>
-		<string>3.3.11</string>
-		<string>3.3.10</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -1771,20 +1771,26 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {3440, 1440}}</string>
 		<key>topLeft</key>
-		<string>{1076, 882}</string>
+		<string>{699, 955}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
-	<string>019F5642-2DE8-453F-8D7F-F1589C4EB3E5</string>
+	<string>BF1FD488-D7CC-4CBF-824B-7E9F205BA3D7</string>
+	<key>NoSyncLastTipTime</key>
+	<real>620331433.89250803</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>86</integer>
+	<integer>44</integer>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>613984220.48876202</real>
+	<real>617483806.57246304</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<true/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -2135,7 +2141,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalIconName</string>
+				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2143,7 +2149,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
+				<string>currentTab.currentSession.terminalIconName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2274,14 +2280,6 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.terminalWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentSession.commandLine</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2314,14 +2312,6 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.terminalIconName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentSession.presentationName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -2331,14 +2321,6 @@
 				<true/>
 				<key>name</key>
 				<string>iterm2.localhostName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -2472,19 +2454,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -2518,20 +2500,36 @@
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
-<<<<<<< Updated upstream
-	<real>613308370.751845</real>
-=======
 	<real>617052799.58726394</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>0003</string>
-		<string>0001</string>
-		<string>000</string>
-		<string>0002</string>
+		<string>0004</string>
 		<string>0000</string>
+		<string>0010</string>
+		<string>0007</string>
 		<string>0003</string>
+		<string>0013</string>
+		<string>0006</string>
+		<string>0002</string>
+		<string>000</string>
+		<string>0012</string>
+		<string>0009</string>
+		<string>0005</string>
+		<string>0001</string>
+		<string>0011</string>
+		<string>0008</string>
+		<string>0014</string>
 	</array>
->>>>>>> Stashed changes
+	<key>PasteSpecialChunkDelay</key>
+	<real>0.63095734420596472</real>
+	<key>PasteSpecialChunkSize</key>
+	<integer>1</integer>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2576,23 +2574,15 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=52</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=71</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-<<<<<<< Updated upstream
-	<date>2020-08-19T07:21:43Z</date>
-=======
-	<date>2020-08-05T19:38:39Z</date>
->>>>>>> Stashed changes
+	<date>2020-08-28T18:02:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUUpdateGroupIdentifier</key>
-	<integer>3449770486</integer>
-	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SoundForEsc</key>
