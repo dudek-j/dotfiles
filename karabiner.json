@@ -1,286 +1,333 @@
 {
-  "global": {
-    "check_for_updates_on_startup": true,
-    "show_in_menu_bar": true,
-    "show_profile_name_in_menu_bar": false
-  },
-  "profiles": [
-    {
-      "complex_modifications": {
-        "parameters": {
-          "basic.simultaneous_threshold_milliseconds": 50,
-          "basic.to_delayed_action_delay_milliseconds": 500,
-          "basic.to_if_alone_timeout_milliseconds": 1000,
-          "basic.to_if_held_down_threshold_milliseconds": 500,
-          "mouse_motion_to_scroll.speed": 100
-        },
-        "rules": [
-          {
-            "description": "Summon terminal",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "1",
-                  "modifiers": {
-                    "mandatory": ["left_option"]
-                  }
+    "global": {
+        "check_for_updates_on_startup": true,
+        "show_in_menu_bar": false,
+        "show_profile_name_in_menu_bar": false
+    },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.simultaneous_threshold_milliseconds": 50,
+                    "basic.to_delayed_action_delay_milliseconds": 500,
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "mouse_motion_to_scroll.speed": 100
                 },
-                "to": [
-                  {
-                    "shell_command": "open -a iterm"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Summon Chrome",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "2",
-                  "modifiers": {
-                    "mandatory": ["left_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Google Chrome.app'"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Summon VSCode",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "3",
-                  "modifiers": {
-                    "mandatory": ["left_option"]
-                  }
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Visual Studio Code'"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "control + z or control + shift + z to <>",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "z",
-                  "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["shift"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "double left shift to cap_lock",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "left_shift",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "left_shift pressed",
-                    "value": 1
-                  }
+                "rules": [
+                    {
+                        "description": "Summon terminal",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a iterm"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Summon Chrome",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Google Chrome.app'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Summon VSCode",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Visual Studio Code'"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "C9apslock to left-ctrl",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock"
+                                },
+                                "to": {
+                                    "key_code": "escape"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Toggle Language",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "left_shift pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "sv"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "left_shift pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "sv"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "left_shift pressed",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "left_shift pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "left_shift pressed",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    }
                 ]
-              },
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "left_shift",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "left_shift pressed",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "left_shift"
-                  }
-                ],
-                "to_delayed_action": {
-                  "to_if_invoked": [
-                    {
-                      "set_variable": {
-                        "name": "left_shift pressed",
-                        "value": 0
-                      }
-                    }
-                  ],
-                  "to_if_canceled": [
-                    {
-                      "set_variable": {
-                        "name": "left_shift pressed",
-                        "value": 0
-                      }
-                    }
-                  ]
+            },
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 0,
+                        "vendor_id": 13
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
                 }
-              }
-            ]
-          }
-        ]
-      },
-      "devices": [
-        {
-          "disable_built_in_keyboard_if_exists": false,
-          "fn_function_keys": [],
-          "identifiers": {
-            "is_keyboard": true,
-            "is_pointing_device": false,
-            "product_id": 0,
-            "vendor_id": 13
-          },
-          "ignore": false,
-          "manipulate_caps_lock_led": false,
-          "simple_modifications": []
+            ],
+            "fn_function_keys": [
+                {
+                    "from": {
+                        "key_code": "f1"
+                    },
+                    "to": {
+                        "consumer_key_code": "display_brightness_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f2"
+                    },
+                    "to": {
+                        "consumer_key_code": "display_brightness_increment"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f3"
+                    },
+                    "to": {
+                        "key_code": "mission_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f4"
+                    },
+                    "to": {
+                        "key_code": "launchpad"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f5"
+                    },
+                    "to": {
+                        "key_code": "illumination_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f6"
+                    },
+                    "to": {
+                        "key_code": "illumination_increment"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f7"
+                    },
+                    "to": {
+                        "consumer_key_code": "rewind"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f8"
+                    },
+                    "to": {
+                        "consumer_key_code": "play_or_pause"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f9"
+                    },
+                    "to": {
+                        "consumer_key_code": "fastforward"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f10"
+                    },
+                    "to": {
+                        "consumer_key_code": "mute"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f11"
+                    },
+                    "to": {
+                        "consumer_key_code": "volume_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f12"
+                    },
+                    "to": {
+                        "consumer_key_code": "volume_increment"
+                    }
+                }
+            ],
+            "name": "Default profile",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
+            "selected": true,
+            "simple_modifications": [],
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "mouse_key_xy_scale": 100
+            }
         }
-      ],
-      "fn_function_keys": [
-        {
-          "from": {
-            "key_code": "f1"
-          },
-          "to": {
-            "consumer_key_code": "display_brightness_decrement"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f2"
-          },
-          "to": {
-            "consumer_key_code": "display_brightness_increment"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f3"
-          },
-          "to": {
-            "key_code": "mission_control"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f4"
-          },
-          "to": {
-            "key_code": "launchpad"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f5"
-          },
-          "to": {
-            "key_code": "illumination_decrement"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f6"
-          },
-          "to": {
-            "key_code": "illumination_increment"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f7"
-          },
-          "to": {
-            "consumer_key_code": "rewind"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f8"
-          },
-          "to": {
-            "consumer_key_code": "play_or_pause"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f9"
-          },
-          "to": {
-            "consumer_key_code": "fastforward"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f10"
-          },
-          "to": {
-            "consumer_key_code": "mute"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f11"
-          },
-          "to": {
-            "consumer_key_code": "volume_decrement"
-          }
-        },
-        {
-          "from": {
-            "key_code": "f12"
-          },
-          "to": {
-            "consumer_key_code": "volume_increment"
-          }
-        }
-      ],
-      "name": "Default profile",
-      "parameters": {
-        "delay_milliseconds_before_open_device": 1000
-      },
-      "selected": true,
-      "simple_modifications": [],
-      "virtual_hid_keyboard": {
-        "country_code": 0,
-        "mouse_key_xy_scale": 100
-      }
-    }
-  ]
+    ]
 }
