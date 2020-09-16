@@ -73,6 +73,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(
   git 
+  osx
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,7 +94,7 @@ alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
 alias foam="code ~/Documents/Foam"
-alias ls="ls -alhG"
+alias ll="ls -alhG"
 
 # User configuration
 
