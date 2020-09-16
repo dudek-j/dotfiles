@@ -93,6 +93,7 @@ alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
 alias foam="code ~/Documents/Foam"
+alias ls="ls -alhG"
 
 # User configuration
 
