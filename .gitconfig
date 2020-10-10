@@ -2,7 +2,8 @@
 	email = jakub.a.dudek@gmail.com
 	name = Jakub Dudek
 [core]
-	excludesfile = /Users/duddan/.gitignore
+	excludesfile = /Users/dudek/.gitignore
 
 [alias]
 	amend = commit --amend 
+	logg = log --graph --all --decorate

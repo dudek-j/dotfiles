@@ -868,9 +868,9 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>853 844 735 382 0 0 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 836 1050 0 0 1680 1050 </string>
+	<string>1245 1050 1144 1440 -1050 1050 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>514 1303 836 1067 -1050 1050 3440 1440 </string>
+	<string>1607 1372 836 1067 -1050 1050 3440 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>709 0 836 1050 0 0 1680 1050 </string>
 	<key>NeverWarnAboutShortLivedSessions_7430792E-4DD1-405B-8B3E-EFDA6B792B36</key>
@@ -1940,16 +1940,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{-1050, 1050}, {3440, 1440}}</string>
 		<key>topLeft</key>
-		<string>{269, 674}</string>
+		<string>{866, 1823}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>BF1FD488-D7CC-4CBF-824B-7E9F205BA3D7</string>
 	<key>NoSyncLastTipTime</key>
-	<real>621939694.35527503</real>
+	<real>622925965.42391098</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>74</integer>
+	<integer>88</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2672,37 +2672,45 @@
 	<real>617052799.58726394</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
-		<string>0010</string>
-		<string>0026</string>
-		<string>0015</string>
-		<string>0004</string>
-		<string>0009</string>
-		<string>0024</string>
-		<string>0013</string>
-		<string>0002</string>
-		<string>0018</string>
-		<string>0007</string>
-		<string>0022</string>
-		<string>0011</string>
-		<string>0000</string>
-		<string>0027</string>
-		<string>0016</string>
-		<string>0005</string>
-		<string>0020</string>
-		<string>0025</string>
-		<string>0014</string>
-		<string>0003</string>
-		<string>0019</string>
-		<string>0008</string>
-		<string>0023</string>
-		<string>0012</string>
-		<string>0001</string>
-		<string>000</string>
 		<string>0017</string>
-		<string>0006</string>
-		<string>0028</string>
-		<string>0021</string>
 		<string>0029</string>
+		<string>0001</string>
+		<string>0013</string>
+		<string>0025</string>
+		<string>0021</string>
+		<string>0033</string>
+		<string>0006</string>
+		<string>0018</string>
+		<string>0002</string>
+		<string>0014</string>
+		<string>0026</string>
+		<string>0010</string>
+		<string>0022</string>
+		<string>000</string>
+		<string>0034</string>
+		<string>0030</string>
+		<string>0007</string>
+		<string>0019</string>
+		<string>0003</string>
+		<string>0015</string>
+		<string>0027</string>
+		<string>0011</string>
+		<string>0023</string>
+		<string>0035</string>
+		<string>0031</string>
+		<string>0008</string>
+		<string>0004</string>
+		<string>0016</string>
+		<string>0028</string>
+		<string>0000</string>
+		<string>0012</string>
+		<string>0024</string>
+		<string>0036</string>
+		<string>0020</string>
+		<string>0032</string>
+		<string>0009</string>
+		<string>0005</string>
+		<string>0037</string>
 	</array>
 	<key>PasteSpecialChunkDelay</key>
 	<real>0.63095734420596472</real>
@@ -2762,7 +2770,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-16T09:20:23Z</date>
+	<date>2020-09-28T04:53:06Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
