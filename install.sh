@@ -22,6 +22,9 @@ ln -s ${BASEDIR}/.oh-my-zsh ~/.oh-my-zsh
 ln -s ${BASEDIR}/.gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/.gitignore ~/.gitignore 
 
+# tmux
+ln -s ${BASEDIR}/.tmux.conf ~/.tmux.conf
+
 # Karabiner Elements
 mkdir -p ~/.config/karabiner
 ln -s ${BASEDIR}/karabiner.json ~/.config/karabiner/karabiner.json 
