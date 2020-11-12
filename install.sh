@@ -3,6 +3,10 @@
 # Get dotfile directory
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew bundle ${BASEDIR}/.Brewfile
+
 # Update submodules
 git submodule update --init --remote
 
