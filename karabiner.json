@@ -16,36 +16,11 @@
         },
         "rules": [
           {
-            "description": "Post Esc if Caps is tapped, Control if held.",
+            "description": "Summon terminal with F13",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control",
-                    "lazy": true
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Summon terminal with escape",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "escape"
+                  "key_code": "f13"
                 },
                 "to": [
                   {
