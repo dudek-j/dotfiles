@@ -38,3 +38,7 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# GO install env
+
+export PATH=$PATH:/$HOME/go/bin/
