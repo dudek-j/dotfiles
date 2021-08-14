@@ -10,6 +10,12 @@ plugins=(
   osx
 )
 
+# Functions
+
+bsi () {
+  brew install $(brew search $1 | fzf ) 
+}
+
 # Aliases
 alias gs='git status'
 alias cat='bat'
@@ -50,3 +56,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
