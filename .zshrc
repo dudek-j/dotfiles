@@ -25,7 +25,8 @@ alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
 alias foam="code ~/Documents/Foam"
-alias ll="ls -alhG"
+alias ll="exa -al"
+alias ls="exa"
 
 # Pure prompt
 autoload -U promptinit; promptinit
