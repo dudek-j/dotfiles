@@ -1,6 +1,6 @@
 [submodule ".vim/pack/vendor/start/ctrlp.vim"]
 	path = .vim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh
