@@ -3,6 +3,7 @@
 	name = Jakub Dudek
 [core]
 	excludesfile = /Users/dudek/.gitignore
+	editor = nano
 
 [alias]
 	amend = commit --amend 
