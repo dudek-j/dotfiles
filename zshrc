@@ -58,3 +58,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Haste
+
+export HASTE_SERVER="https://paste.dudek.dev/"
