@@ -8,3 +8,5 @@
 [alias]
 	amend = commit --amend 
 	logg = log --graph --all --decorate
+[pull]
+	rebase = false
