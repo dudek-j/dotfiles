@@ -27,6 +27,8 @@ alias rm="trash"
 alias foam="code ~/Documents/Foam"
 alias ll="exa -al"
 alias ls="exa"
+alias slink="xcrun simctl openurl booted"
+alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
 
 # Pure prompt
 autoload -U promptinit; promptinit
