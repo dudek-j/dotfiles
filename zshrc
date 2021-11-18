@@ -29,7 +29,9 @@ alias ll="exa -al"
 alias ls="exa"
 alias slink="xcrun simctl openurl booted"
 alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
-alias gr="git status | grep -e '^\s*modified:' | sed -E 's/^.*modified:   //' | fzf | sed -e 's/ /\\ /g' | xargs git restore"
+
+# Gitgud
+source ~/Documents/Code/dotfiles/scripts/gitgud.sh
 
 # Pure prompt
 autoload -U promptinit; promptinit
