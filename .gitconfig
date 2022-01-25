@@ -2,7 +2,7 @@
 	email = jakub.a.dudek@gmail.com
 	name = Jakub Dudek
 [core]
-	excludesfile = /Users/dudek/.gitignore
+	excludesfile = ~/.gitignore
 	editor = nano
 
 [alias]
