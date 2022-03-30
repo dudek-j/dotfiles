@@ -12,8 +12,23 @@ plugins=(
 
 # Functions
 
+## Brew serach, filter with fzf, and download
 bsi () {
   brew install $(brew search $1 | fzf ) 
+}
+
+
+## Clone repo and remove git folder 
+degit () {
+  projname=$(basename $1 .git)
+  git clone $1 $2
+
+  if test -z $2
+  then
+      rm -rf ./$projname/.git
+  else
+      rm -rf ./$2/.git
+  fi
 }
 
 # Aliases
