@@ -44,6 +44,7 @@ alias ll="exa -al"
 alias ls="exa"
 alias slink="xcrun simctl openurl booted"
 alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
+alias haste="pbpaste | haste | pbcopy"
 
 # Gitgud
 source ~/Documents/Code/dotfiles/scripts/gitgud.sh
