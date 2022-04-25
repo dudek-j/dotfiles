@@ -52,6 +52,8 @@ source ~/Documents/Code/dotfiles/scripts/gitgud.sh
 # Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
+zstyle :prompt:pure:git:stash show yes
+PURE_GIT_STASH_SYMBOL=🗄
 
 # Autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
