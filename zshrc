@@ -82,5 +82,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Haste
-
 export HASTE_SERVER="https://paste.dudek.dev/"
+
+# Mongod
+export PATH="/usr/local/opt/mongodb-community@4.4/bin:$PATH"
