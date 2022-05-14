@@ -7,7 +7,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(
   git 
-  osx
+  macos
 )
 
 # Functions
