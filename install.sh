@@ -12,7 +12,6 @@ git submodule update --init --remote
 
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
-ln -s ${BASEDIR}/vim ~/.vim
 
 # zsh
 ln -s ${BASEDIR}/zshrc ~/.zshrc
