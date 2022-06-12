@@ -70,11 +70,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # GO install env
-
 export PATH=$PATH:/$HOME/go/bin/
 
 # React Native, Android related exports
-
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -86,3 +84,11 @@ export HASTE_SERVER="https://paste.dudek.dev/"
 
 # Mongod
 export PATH="/usr/local/opt/mongodb-community@4.4/bin:$PATH"
+
+# Python version manager
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+## macOS
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
