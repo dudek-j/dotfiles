@@ -11,22 +11,25 @@ brew bundle --file ${BASEDIR}/Brewfile
 git submodule update --init --remote
 
 # vim
-ln -s ${BASEDIR}/vimrc ~/.vimrc
+ln -fs ${BASEDIR}/vimrc ~/.vimrc
 
 # zsh
-ln -s ${BASEDIR}/zshrc ~/.zshrc
-ln -s ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
+ln -fs ${BASEDIR}/zshrc ~/.zshrc
+ln -fs ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
 
 # git
-ln -s ${BASEDIR}/gitconfig ~/.gitconfig
-ln -s ${BASEDIR}/gitignore ~/.gitignore 
+ln -fs ${BASEDIR}/gitconfig ~/.gitconfig
+ln -fs ${BASEDIR}/gitignore ~/.gitignore 
 
 # tmux
-ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+ln -fs ${BASEDIR}/tmux.conf ~/.tmux.conf
 
 # Karabiner Elements
 mkdir -p ~/.config/karabiner
-ln -s ${BASEDIR}/karabiner.json ~/.config/karabiner/karabiner.json 
+ln -fs ${BASEDIR}/karabiner.json ~/.config/karabiner/karabiner.json 
+
+# Kitty
+ln -fs ${BASEDIR}/kitty ~/.config/
 
 # NPM global scripts
 npm i -g trash-cli pure-prompt
