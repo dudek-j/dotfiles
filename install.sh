@@ -23,6 +23,7 @@ ln -fs ${BASEDIR}/gitignore ~/.gitignore
 
 # tmux
 ln -fs ${BASEDIR}/tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Karabiner Elements
 mkdir -p ~/.config/karabiner
