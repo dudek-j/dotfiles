@@ -1,14 +1,9 @@
 #ZSH
+plugins=(macos)
 export ZSH=$HOME/.oh-my-zsh
-
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-plugins=(
-  git 
-  macos
-)
 
 # Functions
 
@@ -35,7 +30,7 @@ degit () {
 alias gs='git status'
 alias cat='bat'
 alias ping='prettyping --nolegend'
-alias top='sudo htop'
+alias top='btm'
 alias zshconfig="code ~/.zshrc"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
