@@ -92,3 +92,8 @@ eval "$(pyenv init -)"
 
 ## macOS
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+
+# Tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	tmux a || tmux
+fi
