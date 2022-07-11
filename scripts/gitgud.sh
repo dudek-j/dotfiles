@@ -16,12 +16,12 @@
 # ----------------
 # prints helper menu
 
-gitgud() {
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
 
-    GREEN='\033[0;32m'
-    NC='\033[0m' # No Color
-    BOLD=$(tput bold)
-    NORMAL=$(tput sgr0)
+gitgud() {
 
     echo "
     ${BOLD}Gitgud commands${NORMAL}
@@ -54,11 +54,6 @@ gr() {
         echo "Not a git repository"
         return -1
     fi
-
-    # Colors, fun :) 
-    RED='\\033[0;31m'
-    GREEN='\\033[0;32m'
-    NC='\\033[0m' # No Color
 
     # List staged files, prepend green "Staged: "
     STAGED=$(git diff --staged --name-only | sed -e "s/^/${GREEN}Staged: ${NC}/") 
@@ -127,9 +122,29 @@ gn(){
         return -1
     fi
 
-    git restore --staged .
-    git restore .
-    git clean -f .
+    if ! has_changes
+    then
+        echo "No changes, working tree clean"
+	return -1
+    fi
+    
+    echo
+    echo ${BOLD}Following files will be nuked ${NC}
+    echo ${BOLD}------------------------------------------------------------------------${NC}
+    git status -s
+    echo ${BOLD}------------------------------------------------------------------------${NC}
+    read -q "response?Are you sure? [y/N] " response
+        case "$response" in
+            [yY][eE][sS]|[yY]) 
+               git restore --staged .
+               git restore .
+               git clean -f .
+	       return 0
+            ;;
+    *)
+    ;;
+    esac
+    return -1
 }
 
 # gp | git push 
@@ -172,4 +187,13 @@ is_git_repo() {
         return 0
     fi
     return -1
+}
+
+has_changes() {
+    if [[ -z $(git status -s) ]]
+    then
+	return -1 
+    else
+	return 0 
+    fi
 }
