@@ -159,7 +159,7 @@ gp(){
         return -1
     fi
 
-    git push || git branch --show-current | xargs git push -u origin
+    git push $1 || git branch --show-current | xargs git push -u origin
 }
 
 # gch | git checkout
