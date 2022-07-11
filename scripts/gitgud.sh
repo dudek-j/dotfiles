@@ -133,6 +133,7 @@ gn(){
     echo ${BOLD}------------------------------------------------------------------------${NC}
     git status -s
     echo ${BOLD}------------------------------------------------------------------------${NC}
+
     read -q "response?Are you sure? [y/N] " response
         case "$response" in
             [yY][eE][sS]|[yY]) 
@@ -144,6 +145,7 @@ gn(){
     *)
     ;;
     esac
+
     return -1
 }
 
@@ -166,7 +168,6 @@ gp(){
 # -------------------
 # Interactively checkout branch, all git-branch flags work as expected
 # "gch" : For local branches only
-# "gch --all" : Includes remote branches
 
 gch () {
     # Check that we are in a project
@@ -176,7 +177,21 @@ gch () {
         return -1
     fi
 
-    git branch $1 | fzf | xargs git checkout 
+    # If no branch provided pick with fzf
+    if [ -z "$1" ]
+        then
+        git branch $1 | fzf | sed -r 's/\* //'| xargs git checkout 
+	return 0
+    fi
+    
+    # If branch doesn't exist create new one
+    if [ -z `git branch --format='%(refname:short)' | grep -w $1` ]
+	then
+	return `git checkout -b $1`
+    fi
+   
+    # Finally try to checkout existing branch
+    git checkout $1 
 }
 
 
