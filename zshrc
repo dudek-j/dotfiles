@@ -2,8 +2,8 @@
 plugins=(macos)
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Functions
 
@@ -42,16 +42,17 @@ alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
 alias haste="pbpaste | haste | pbcopy"
 
 # Gitgud
-source ~/Documents/Code/dotfiles/scripts/gitgud.sh
+source ~/Code/dotfiles/scripts/gitgud.sh
 
 # Pure prompt
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 zstyle :prompt:pure:git:stash show yes
 PURE_GIT_STASH_SYMBOL=🗄
 
 # Autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 # Openjdk
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
