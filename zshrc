@@ -93,3 +93,4 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	tmux a || tmux
 fi
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
