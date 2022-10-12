@@ -28,6 +28,7 @@ degit () {
 
 # Aliases
 alias gs='git status'
+alias gl='git log --ext-diff'
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='btm'

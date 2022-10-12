@@ -10,3 +10,5 @@
 	logg = log --graph --all --decorate
 [pull]
 	rebase = false
+[diff]
+	external = difft
