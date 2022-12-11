@@ -1,4 +1,7 @@
 #ZSH
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+
 plugins=(macos)
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -94,4 +97,3 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	tmux a || tmux
 fi
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
