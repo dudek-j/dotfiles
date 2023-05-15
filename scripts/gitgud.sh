@@ -17,6 +17,7 @@
 # prints helper menu
 
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 NC='\033[0m' # No Color
 BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
@@ -56,10 +57,10 @@ gr() {
     fi
 
     # List staged files, prepend green "Staged: "
-    STAGED=$(git diff --staged --name-only | sed -e "s/^/${GREEN}Staged: ${NC}/") 
+    STAGED=$(git diff --staged --name-only | sed -e "s/^/\\${GREEN}Staged: \\${NC}/") 
 
     # List unstaged files, prepend red "Unstaged: "
-    UNSTAGED=$(git diff --name-only | sed -e "s/^/${RED}Unstaged: ${NC}/") 
+    UNSTAGED=$(git diff --name-only | sed -e "s/^/\\${RED}Unstaged: \\${NC}/") 
 
     # Check for changes
     if [[ -z $STAGED && -z $UNSTAGED ]]
