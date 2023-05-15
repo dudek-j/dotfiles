@@ -195,6 +195,13 @@ gch () {
     git checkout $1 
 }
 
+# Aliases
+
+# gam | git commit --amend
+gam () {
+    git commit --amend
+}
+
 
 #### Helpers ####
 #-----------------
