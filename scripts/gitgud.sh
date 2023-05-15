@@ -23,7 +23,7 @@ BOLD=$(tput bold)
 NORMAL=$(tput sgr0)
 
 gitgud() {
-
+    
     echo "
     ${BOLD}Gitgud commands${NORMAL}
     ${GREEN}------------------------------------------------------------------------${NC}
@@ -37,7 +37,16 @@ gitgud() {
     Push, but automatically add upstream branch if one doesn't exists
 
     ${BOLD}gch ${NORMAL}: 'git checkout'
-    Interactively checkout branch, --all to include remote branches"
+    Interactively checkout branch, --all to include remote branches
+
+    ${BOLD}gro ${NORMAL}: 'git reset --hard orgin/<BRANCH>
+    Reset history to origin for the same branch
+
+    ${BOLD}Gitgud aliases${NORMAL}
+    ${GREEN}------------------------------------------------------------------------${NC}
+    ${BOLD}gam ${NORMAL}: 'git commit --amend'
+    ${BOLD}gaa ${NORMAL}: 'git commit --amend'
+    "
 
     return 0
 }
@@ -49,12 +58,7 @@ gitgud() {
 # "gr -f" : Restores staged files completely instead of moving them to unstaged
 
 gr() {
-    # Check that we are in a project
-    if ! is_git_repo 
-    then
-        echo "Not a git repository"
-        return -1
-    fi
+    ensure_git_repo
 
     # List staged files, prepend green "Staged: "
     STAGED=$(git diff --staged --name-only | sed -e "s/^/\\${GREEN}Staged: \\${NC}/") 
@@ -116,12 +120,7 @@ gr() {
 # Fully clear any uncommited changes, removes all new files
 
 gn(){
-    # Check that we are in a project
-    if ! is_git_repo 
-    then
-        echo "Not a git repository"
-        return -1
-    fi
+    ensure_git_repo
 
     if ! has_changes
     then
@@ -155,12 +154,7 @@ gn(){
 # Simple git push but adds remote origin if it doesn't exist as origin/current-branch-name
 
 gp(){
-    # Check that we are in a project
-    if ! is_git_repo 
-    then
-        echo "Not a git repository"
-        return -1
-    fi
+    ensure_git_repo
 
     git push $1 || git branch --show-current | xargs git push -u origin
 }
@@ -171,12 +165,7 @@ gp(){
 # "gch" : For local branches only
 
 gch () {
-    # Check that we are in a project
-    if ! is_git_repo 
-    then
-        echo "Not a git repository"
-        return -1
-    fi
+    ensure_git_repo
 
     # If no branch provided pick with fzf
     if [ -z "$1" ]
@@ -195,21 +184,35 @@ gch () {
     git checkout $1 
 }
 
-# Aliases
+# gro | git reset origin
+# --------------------
+# Reset history to origin for the same branch
 
-# gam | git commit --amend
+gro () {
+    ensure_git_repo
+
+    echo ${BOLD}Your local changes will be nuked ${NC}
+    read -q "response?Are you sure? [y/N] " response
+    git reset origin/$(git rev-parse --abbrev-ref HEAD)
+}
+
+# Aliases
 gam () {
     git commit --amend
 }
 
+gaa () {
+    git add -A
+}
 
 #### Helpers ####
 #-----------------
-is_git_repo() {
+ensure_git_repo() {
     if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
         return 0
     fi
-    return -1
+    echo "Not a git repository"
+    kill -INT $$
 }
 
 has_changes() {
