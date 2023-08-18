@@ -45,7 +45,8 @@ gitgud() {
     ${BOLD}Gitgud aliases${NORMAL}
     ${GREEN}------------------------------------------------------------------------${NC}
     ${BOLD}gam ${NORMAL}: 'git commit --amend'
-    ${BOLD}gaa ${NORMAL}: 'git commit --amend'
+    ${BOLD}gaa ${NORMAL}: 'git add -A'
+    ${BOLD}gc ${NORMAL}: 'git commit -m'
     "
 
     return 0
@@ -203,6 +204,10 @@ gam () {
 
 gaa () {
     git add -A
+}
+
+gc () {
+    git commit -m $1
 }
 
 #### Helpers ####
