@@ -140,7 +140,7 @@ gn(){
             [yY][eE][sS]|[yY]) 
                git restore --staged .
                git restore .
-               git clean -f .
+               git clean -f -d -x .
 	       return 0
             ;;
     *)
