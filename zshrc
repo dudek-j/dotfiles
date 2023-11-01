@@ -31,8 +31,7 @@ degit () {
 
 # Aliases
 alias gs='git status'
-alias gl='git log --ext-diff'
-alias cat='bat'
+alias gl='git log --ext-diff' alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='btm'
 alias zshconfig="code ~/.zshrc"
@@ -69,6 +68,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# Ruby
+export BUNDLE_PATH=~/.gems
+
 # GO install env
 export PATH=$PATH:/$HOME/go/bin/
 
@@ -102,3 +104,4 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
