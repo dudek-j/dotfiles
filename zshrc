@@ -43,6 +43,7 @@ alias ls="exa"
 alias slink="xcrun simctl openurl booted"
 alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
 alias haste="pbpaste | haste | pbcopy"
+alias wip="git add -A && git commit -m 'wip'"
 
 # Gitgud
 source ~/Code/dotfiles/scripts/gitgud.sh
@@ -99,6 +100,9 @@ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	tmux a || tmux
 fi
+
+# Squeel
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
