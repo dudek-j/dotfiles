@@ -1,0 +1,63 @@
+(defcfg
+  input  (iokit-name "Apple Internal Keyboard / Trackpad")
+  output (kext)
+
+  ;; Set this to false to disable any command-execution in KMonad
+  ;; allow-cmd true
+)
+
+;; lmet -> cmd
+;; lalt -> option
+;; fn   -> fn
+
+
+(defalias
+    nav (layer-toggle nav)
+
+    home C-a
+    end C-e
+    spn (tap-hold-next-release 250 space (layer-toggle nav))
+    fn (around (layer-toggle function) fn)
+)
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
+  fn   lctl lalt lmet           spc            rmet ralt left down rght
+)
+
+;; Below, I use `around' to compose `layer-toggle' with `fn' (instead
+;; of using `layer-toggle' directly) so that the `fn' keypress
+;; actually gets emitted. This matters when using an application that
+;; can use `fn' as a modifier (like Emacs).
+
+(deflayer default
+  esc brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  lctl a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft   _
+  fn   lctl lalt lmet           @spn          rmet   ralt  _    _    _
+)
+
+(deflayer nav
+  esc brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
+  tab  q    w    e    r    t    y  @home up  @end   p    [    ]    \
+  lctl a    s   lsft lalt  g    h  left  down right ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft   _
+  fn   lctl lalt lmet           @spn          rmet ralt  _    _    _
+)
+
+
+(deflayer function
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _              _              _    _    _    _    _
+)
