@@ -13,16 +13,26 @@
 
 (defalias
     nav (layer-toggle nav)
+    navs (layer-toggle nav-shf)
 
     home C-a
     end C-e
     spn (tap-hold-next-release 250 space (layer-toggle nav))
     fn (around (layer-toggle function) fn)
+
+    ä (tap-macro A-u a)
+    Ä (tap-macro A-u S-a) 
+
+    ö (tap-macro A-u o)
+    Ö (tap-macro A-u S-O)
+
+    å (tap-macro A-a)
+    Å (tap-macro A-S-a)
 )
 
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
+  nubs  1    2    3    4    5    6    7    8    9    0    -    =   bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
@@ -35,26 +45,35 @@
 ;; can use `fn' as a modifier (like Emacs).
 
 (deflayer default
-  esc brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]     \
   lctl a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft   _
-  fn   lctl lalt lmet           @spn          rmet   ralt  _    _    _
+  _   lctl lalt lmet           @spn          rmet   ralt  _    _    _
 )
 
 (deflayer nav
-  esc brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
-  tab  q    w    e    r    t    y  @home up  @end   p    [    ]    \
-  lctl a    s   lsft lalt  g    h  left  down right ;    '    ret
+  tab  q    w    e    r    t    y  @home up  @end   p    @å    ]    \
+  lctl a    s   lsft lalt  g    h  left  down right @ö   @ä    ret
+  @navs z    x    c    v    b    n    m    ,    .    /    rsft   _
+  @fn   lctl lalt lmet           @spn          rmet ralt  _    _    _
+)
+
+(deflayer nav-shf
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
+  tab  q    w    e    r    t    y  @home up  @end   p    @Å    ]    \
+  lctl a    s   lsft lalt  g    h  left  down right @Ö   @Ä    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft   _
-  fn   lctl lalt lmet           @spn          rmet ralt  _    _    _
+  @fn   lctl lalt lmet           @spn          rmet ralt  _    _    _
 )
 
 
 (deflayer function
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  esc brdn brup lp   mctl bldn blup prev pp   next mute vold volu
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _
