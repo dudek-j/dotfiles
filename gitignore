@@ -9,3 +9,6 @@ node_modules/
 
 #Overall ignore
 _ignore_*
+
+buildServer.json
+workrc
