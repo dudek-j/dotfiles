@@ -3,7 +3,7 @@
 	name = Jakub Dudek
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nvim
 
 [alias]
 	amend = commit --amend 
