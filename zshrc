@@ -53,6 +53,7 @@ bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
 
 # Aliases
+alias n='nvim .'
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='btm'
