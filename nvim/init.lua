@@ -33,7 +33,9 @@ vim.opt.splitbelow = true
 
 -- Sets how neovim will display certain whitespace in the editor.
 vim.opt.list = true
-vim.opt.listchars = { tab = "  ", trail = "·", nbsp = "␣" }
+vim.opt.listchars =
+	{ tab = "··", trail = "·", nbsp = "␣", extends = "#", precedes = "*", eol = "¬", leadmultispace = "·" }
+vim.g.indentline_char = "|"
 
 vim.opt.inccommand = "split" -- Preview substitutions as you type
 
@@ -62,36 +64,36 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 -- File specific small indentation
 vim.api.nvim_create_autocmd("BufEnter", {
-  desc = "2 space indentation",
-  pattern = { "*.py" },
-  callback = function()
-    vim.o.tabstop = 2
-    vim.o.expandtab = true
-    vim.o.softtabstop = 2
-    vim.o.shiftwidth = 2
-  end,
+	desc = "2 space indentation",
+	pattern = { "*.lua" },
+	callback = function()
+		vim.o.tabstop = 2
+		vim.o.expandtab = true
+		vim.o.softtabstop = 2
+		vim.o.shiftwidth = 2
+	end,
 })
 
 -- NOTE: Install Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
