@@ -35,12 +35,16 @@ bsi () {
   brew install $(brew search $1 | fzf ) 
 }
 
+# Open nvim to provided path other wise open current directory
+n () {
+  nvim ${1:-.}
+}
+
 # Kitty option-left/right
 bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
 
 # Aliases
-alias n='nvim .'
 alias cat='bat --theme="Dracula"'
 alias ping='prettyping --nolegend'
 alias top='btm'
