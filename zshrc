@@ -54,7 +54,7 @@ bindkey "\e[1;3C" forward-word # ⌥→
 
 # Aliases
 alias n='nvim .'
-alias cat='bat'
+alias cat='bat --theme="Dracula"'
 alias ping='prettyping --nolegend'
 alias top='btm'
 alias zshconfig="code ~/.zshrc"
