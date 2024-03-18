@@ -7,8 +7,11 @@ node_modules/
 # Mac
 .DS_Store
 
-#Overall ignore
+# Overall ignore
 _ignore_*
+
+# Telescope ignore
+.rgignore
 
 buildServer.json
 workrc
