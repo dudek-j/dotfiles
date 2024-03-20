@@ -7,7 +7,7 @@ return {
 		require("mini.surround").setup()
 
 		-- gS - split arguments on individual lines
-		require("mini.splitjoin").setup()
+		require("mini.splitjoin").setup({ mappings = { toggle = "gs" } })
 
 		-- improved ci(
 		require("mini.ai").setup()
