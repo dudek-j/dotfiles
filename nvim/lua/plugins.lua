@@ -29,4 +29,5 @@ return {
 	require("configs.cmp"),
 	require("configs.mini"),
 	require("configs.lualine"),
+	require("configs.oil"),
 }
