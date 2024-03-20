@@ -18,7 +18,7 @@ return { -- LSP Configuration & Plugins
 				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition") -- Jump to the definition of the word under your cursor.
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration") -- This is not Goto Definition, this is Goto Declaration.
 				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences") -- Find references for the word under your cursor.
-				map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation") -- When your language can declare types without an actual implementation.
+				map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation") -- When your language can declare types without an actual implementation.
 
 				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame") -- Rename the variable under your cursor
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction") -- Execute a code action
@@ -66,5 +66,7 @@ return { -- LSP Configuration & Plugins
 				end,
 			},
 		})
+
+		require("lspconfig")["sourcekit"].setup({ capabilities = capabilities })
 	end,
 }
