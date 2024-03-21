@@ -22,13 +22,14 @@ return {
 	},
 	"tpope/vim-sleuth", -- detect tabstop and shiftwidth automaticallyp
 	{ "lewis6991/gitsigns.nvim", opts = {} }, -- Git related signs in the gutter
-	require("configs.treesitter"),
-	require("configs.lsp"),
-	require("configs.conform"),
-	require("configs.telescope"),
 	require("configs.cmp"),
-	require("configs.mini"),
+	require("configs.conform"),
+	require("configs.lint"),
+	require("configs.lsp"),
 	require("configs.lualine"),
+	require("configs.mini"),
 	require("configs.oil"),
+	require("configs.telescope"),
+	require("configs.treesitter"),
 	require("configs.xcode"),
 }
