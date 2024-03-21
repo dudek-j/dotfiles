@@ -30,4 +30,5 @@ return {
 	require("configs.mini"),
 	require("configs.lualine"),
 	require("configs.oil"),
+	require("configs.xcode"),
 }

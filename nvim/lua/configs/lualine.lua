@@ -2,6 +2,18 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local function xcodebuild_device()
+			if vim.g.xcodebuild_platform == "macOS" then
+				return " macOS"
+			end
+
+			if vim.g.xcodebuild_os then
+				return " " .. vim.g.xcodebuild_device_name .. " (" .. vim.g.xcodebuild_os .. ")"
+			end
+
+			return " " .. vim.g.xcodebuild_device_name
+		end
+
 		require("lualine").setup({
 			options = {
 				theme = "dracula",
@@ -24,7 +36,11 @@ return {
 						},
 					},
 				},
-				lualine_x = { "encoding", "filetype" },
+				lualine_x = {
+					{ "' ' .. vim.g.xcodebuild_last_status" },
+					{ xcodebuild_device },
+					"filetype",
+				},
 				lualine_y = { "branch", "diff" },
 				lualine_z = { "progress", "location" },
 			},
