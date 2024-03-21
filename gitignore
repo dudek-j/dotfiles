@@ -13,5 +13,9 @@ _ignore_*
 # Telescope ignore
 .rgignore
 
+# xcodebuild.nvim
+.nvim/
 buildServer.json
+
+# Allow for work specific zshrc configs
 workrc
