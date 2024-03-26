@@ -74,7 +74,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- File specific small indentation
 vim.api.nvim_create_autocmd("BufEnter", {
 	desc = "2 space indentation",
-	pattern = { "*.lua" },
+	pattern = { "*.lua", "*.md" },
 	callback = function()
 		vim.o.tabstop = 2
 		vim.o.expandtab = true

@@ -19,6 +19,7 @@ return { -- Formatter
 			python = { "isort", "black" },
 			json = { "prettier" },
 			javascript = { "prettier" },
+			markdown = { "prettier" },
 		},
 	},
 }
