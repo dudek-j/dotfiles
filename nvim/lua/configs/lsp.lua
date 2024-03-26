@@ -68,5 +68,6 @@ return { -- LSP Configuration & Plugins
 		})
 
 		require("lspconfig")["sourcekit"].setup({ capabilities = capabilities })
+		require("lspconfig")["elixirls"].setup({ cmd = { "/opt/homebrew/bin/elixir-ls" }, capabilities = capabilities })
 	end,
 }
