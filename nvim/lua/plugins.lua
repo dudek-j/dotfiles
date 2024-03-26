@@ -31,5 +31,6 @@ return {
 	require("configs.oil"),
 	require("configs.telescope"),
 	require("configs.treesitter"),
+	require("configs.tmux"),
 	require("configs.xcode"),
 }
