@@ -86,3 +86,8 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(mise activate zsh)"
+
+# History size
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups
