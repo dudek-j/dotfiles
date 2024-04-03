@@ -23,6 +23,11 @@ return {
 					hidden = true,
 				},
 				buffers = {
+					mappings = {
+						i = {
+							["<c-d>"] = "delete_buffer",
+						},
+					},
 					sort_mru = true,
 					ignore_current_buffer = true,
 				},
