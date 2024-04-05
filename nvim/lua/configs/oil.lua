@@ -8,7 +8,7 @@ return {
 				["<CR>"] = "actions.select",
 				["<C-v>"] = "actions.select_vsplit",
 				["<C-x>"] = "actions.select_split",
-				["p"] = "actions.preview",
+				["<C-p>"] = "actions.preview",
 				["-"] = "actions.parent",
 			},
 			view_options = {
