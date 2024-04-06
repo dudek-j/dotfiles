@@ -29,6 +29,7 @@ return {
 	require("configs.lualine"),
 	require("configs.mini"),
 	require("configs.oil"),
+	require("configs.tree"),
 	require("configs.telescope"),
 	require("configs.treesitter"),
 	require("configs.tmux"),

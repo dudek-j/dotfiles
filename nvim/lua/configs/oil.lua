@@ -4,6 +4,7 @@ return {
 	opts = {},
 	config = function()
 		require("oil").setup({
+			default_file_explorer = false,
 			keymaps = {
 				["<CR>"] = "actions.select",
 				["<C-v>"] = "actions.select_vsplit",
@@ -16,6 +17,6 @@ return {
 			},
 			use_default_keymaps = false,
 		})
-		vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+		vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 	end,
 }
