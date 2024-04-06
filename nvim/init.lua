@@ -90,6 +90,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 -- Format without saving
+vim.api.nvim_create_user_command("Q", ":qa!", {})
 vim.api.nvim_create_user_command("W", ":noa w", {})
 -- NOTE: Install Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
