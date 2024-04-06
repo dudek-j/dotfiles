@@ -45,6 +45,7 @@ bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
 
 # Aliases
+alias :q='exit'
 alias cat='bat --theme="Dracula"'
 alias ping='prettyping --nolegend'
 alias top='btm'
