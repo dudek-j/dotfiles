@@ -89,7 +89,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.o.shiftwidth = 2
 	end,
 })
-
+-- Format without saving
+vim.api.nvim_create_user_command("W", ":noa w", {})
 -- NOTE: Install Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
