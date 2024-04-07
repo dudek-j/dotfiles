@@ -89,9 +89,24 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.o.shiftwidth = 2
 	end,
 })
--- Format without saving
+--
+-- Force close all
 vim.api.nvim_create_user_command("Q", ":qa!", {})
+-- Format without saving
 vim.api.nvim_create_user_command("W", ":noa w", {})
+-- Markdown listing mark done
+vim.keymap.set("n", "<leader>d", function()
+	local current_line = vim.api.nvim_get_current_line()
+
+	if current_line:find("✔") then
+		vim.cmd(":s/- ✔/-")
+	elseif current_line:find("") then
+		vim.cmd(":s/-/- ✔")
+	end
+
+	vim.cmd("nohlsearch")
+end)
+
 -- NOTE: Install Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
