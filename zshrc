@@ -35,9 +35,9 @@ bsi () {
   brew install $(brew search $1 | fzf ) 
 }
 
-# Open nvim to provided path other wise open current directory
+# fg nvim if 
 n () {
-  nvim ${1:-.}
+  ps -o ppid -o comm= -o pid | grep "$$ nvim" | awk '{print $3}' | fg >/dev/null 2>&1 || nvim .
 }
 
 # Kitty option-left/right
@@ -49,14 +49,9 @@ alias :q='exit'
 alias cat='bat --theme="Dracula"'
 alias ping='prettyping --nolegend'
 alias top='btm'
-alias zshconfig="code ~/.zshrc"
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias rm="trash"
-alias foam="code ~/Documents/Foam"
 alias ll="exa -al"
 alias ls="exa"
-alias slink="xcrun simctl openurl booted"
-alias slinkp="pbpaste && pbpaste | xargs xcrun simctl openurl booted"
 
 # Autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
