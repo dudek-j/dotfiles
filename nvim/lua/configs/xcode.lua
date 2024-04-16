@@ -5,7 +5,6 @@ return {
 		"stevearc/oil.nvim",
 	},
 	config = function()
-		vim.env.XBS_FEAT_NEWFILE = 1
 		require("xcodebuild").setup({
 			test_explorer = {
 				auto_open = false,
