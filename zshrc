@@ -20,7 +20,8 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+# Personal screipts
+export PATH="$HOME/.local/bin/personal:$PATH"
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
