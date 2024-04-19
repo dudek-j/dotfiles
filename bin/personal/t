@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~/Code ~/Code/work ~/Code/personal -mindepth 1 -maxdepth 1 -type d | while read line ; do basename $line ; done | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+target="$session_name:$selected"
+
+
+if ! tmux has-session -t $target 2> /dev/null; then
+    tmux neww -dn $selected
+fi
+
+tmux select-window -t $selected
