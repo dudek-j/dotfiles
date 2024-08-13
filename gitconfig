@@ -12,3 +12,5 @@
 	rebase = false
 [diff]
 	external = difft
+[push]
+	autoSetupRemote = true
