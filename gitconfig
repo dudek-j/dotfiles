@@ -4,13 +4,21 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
-
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    side-by-side = true
+[merge]
+    conflictsstyle = diff3
 [alias]
 	amend = commit --amend 
 	logg = log --graph --all --decorate
+	msg = log --pretty=%s
 [pull]
 	rebase = false
 [diff]
-	external = difft
+    colorMoved = default
 [push]
 	autoSetupRemote = true
