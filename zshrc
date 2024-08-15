@@ -33,6 +33,15 @@ alias gl='git log --ext-diff'
 alias wip="git add -A && git commit -m 'wip'"
 source ~/Code/dotfiles/scripts/gitgud.sh
 
+# Source idf if not available
+idf () {
+  if ! [ -x "$(command -v idf.py)" ]; then
+    source ~/esp/esp-idf/export.sh
+  else
+    echo 'Already sourced' >&2 
+  fi
+}
+
 # Brew serach, filter with fzf, and download
 bsi () {
   brew install $(brew search $1 | fzf ) 
