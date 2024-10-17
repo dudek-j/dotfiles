@@ -62,8 +62,8 @@ alias cat='bat --theme="Dracula"'
 alias ping='prettyping --nolegend'
 alias top='btm'
 alias rm="trash"
-alias ll="exa -al"
-alias ls="exa"
+alias ll="eza -al"
+alias ls="eza"
 
 # Autojump
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
@@ -94,3 +94,8 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(mise activate zsh)"
+
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+setopt EXTENDED_HISTORY
