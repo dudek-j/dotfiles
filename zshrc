@@ -96,6 +96,7 @@ export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 eval "$(mise activate zsh)"
 
 export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1000000000
-export SAVEHIST=1000000000
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
