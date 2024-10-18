@@ -103,6 +103,18 @@ vim.keymap.set("n", "<leader>d", function()
 
 	vim.cmd("nohlsearch")
 end)
+-- Markdown listing mark done
+vim.keymap.set("n", "<leader>x", function()
+	local current_line = vim.api.nvim_get_current_line()
+
+	if current_line:find("✗") then
+		vim.cmd(":s/- ✗/-")
+	elseif current_line:find("") then
+		vim.cmd(":s/-/- ✗")
+	end
+
+	vim.cmd("nohlsearch")
+end)
 
 -- NOTE: Install Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
