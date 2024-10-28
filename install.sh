@@ -15,7 +15,6 @@ ln -fs ${BASEDIR}/vimrc ~/.vimrc
 
 # zsh
 ln -fs ${BASEDIR}/zshrc ~/.zshrc
-ln -fs ${BASEDIR}/oh-my-zsh ~/.oh-my-zsh
 
 # git
 ln -fs ${BASEDIR}/gitconfig ~/.gitconfig
