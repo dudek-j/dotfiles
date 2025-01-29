@@ -17,7 +17,7 @@
 	logg = log --graph --all --decorate
 	msg = log --pretty=%s
 [pull]
-	rebase = false
+	rebase = true
 [diff]
     colorMoved = default
 [push]

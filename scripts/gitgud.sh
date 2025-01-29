@@ -33,9 +33,6 @@ gitgud() {
     ${BOLD}gn ${NORMAL}: 'git nuke'
     Full clear current working tree, cleans added files
 
-    ${BOLD}gp ${NORMAL}: 'git push'
-    Push, but automatically add upstream branch if one doesn't exists
-
     ${BOLD}gch ${NORMAL}: 'git checkout'
     Interactively checkout branch, --all to include remote branches
 
@@ -148,16 +145,6 @@ gn(){
     esac
 
     return -1
-}
-
-# gp | git push 
-# -------------------
-# Simple git push but adds remote origin if it doesn't exist as origin/current-branch-name
-
-gp(){
-    ensure_git_repo
-
-    git push $1 || git branch --show-current | xargs git push -u origin
 }
 
 # gch | git checkout
