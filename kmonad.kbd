@@ -13,23 +13,25 @@
 
 (defalias
     navs (layer-toggle nav-shf)
+    wm (tap-hold-next-release 250 s (layer-toggle wm))
     spn (tap-hold-next-release 250 space (layer-toggle nav))
 
     ec (tap-next esc lctl)
 
     ä (tap-macro A-u a)
-    Ä (tap-macro A-u S-a) 
+    Ä (tap-macro A-u S-a)
 
     ö (tap-macro A-u o)
     Ö (tap-macro A-u S-O)
 
     å (tap-macro A-a)
     Å (tap-macro A-S-a)
-    
+
     nm S-f10
     ml S-f7
     mc S-f8
     mr S-f9
+    nt S-f11
 )
 
 (defsrc
@@ -54,17 +56,26 @@
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
   grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
   tab  q    w    e    r    t    y    u    up   o   p    @å    ]    \
-  @ec  a    s   lsft lalt  g    h  left  down right @ö   @ä    ret
+  @ec  a    @wm  lsft lalt  g    h  left  down right @ö   @ä    ret
  @navs z    x    c    v    b    n    m    ,    .    /    rsft   _
    _  lctl lalt lmet           @spn          rmet ralt    _     _    _
 )
 
+;; Foremost for "ÖÄÅ"
 (deflayer nav-shf
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  1    2    3    4    5    6    7    8    9    0    -    =   bspc
-  tab  q    w    e    r    t    y    u    @nm  o    p    @Å    ]    \
-  @ec  a    s   lsft lalt  g    h    @ml  @mc  @mr  @Ö   @Ä    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft   _
-   _  lctl lalt lmet           @spn          rmet ralt    _     _    _
+  esc  f1   f2   f3   f4   f5   f6   f7    f8    f9     f10  f11  f12
+  grv  1    2    3    4    5    6    7     8     9      0    -    =   bspc
+  tab  q    w    e    r    t    y    u     up    o      p    @Å    ]    \
+  @ec  a    s   lsft lalt  g    h    left  down  right  @Ö   @Ä    ret
+  lsft z    x    c    v    b    n    m     ,    .    /    rsft   _
+   _  lctl lalt lmet           @spn           rmet ralt    _     _    _
  )
 
+(deflayer wm
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    @nt  @nm  _    _    _    _    _
+  _    _    _    _    _    _    _    @ml  @mc  @mr  _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _              _              _    _    _    _    _
+)
