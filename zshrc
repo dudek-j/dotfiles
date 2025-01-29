@@ -30,6 +30,7 @@ export PATH="$HOME/.local/bin/personal:$PATH"
 # Gitgud
 alias gs='git status'
 alias gl='git log --ext-diff'
+alias gu='gitui'
 alias wip="git add -A && git commit -m 'wip'"
 source ~/Code/dotfiles/scripts/gitgud.sh
 
