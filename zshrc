@@ -76,7 +76,7 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Ruby
-export BUNDLE_PATH=~/.gems
+export PATH=$PATH:/$HOME/.local/share/gem/ruby/3.3.0/bin
 
 # GO install env
 export PATH=$PATH:/$HOME/go/bin/
