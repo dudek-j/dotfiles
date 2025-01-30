@@ -1,0 +1,40 @@
+{
+  "theme": "Dracula",
+  "vim_mode": true,
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "assistant": {
+    "version": "2",
+    "enabled": false,
+    "button": false
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright"],
+      "formatter": {
+        "external": { "command": "black", "arguments": ["-"] }
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "dprint",
+          "arguments": ["fmt", "--stdin", "{buffer_path}"]
+        }
+      }
+    }
+  }
+}
