@@ -1,26 +1,28 @@
 {
+  // Personalize
   "theme": "Dracula",
   "vim_mode": true,
-  "features": {
-    "inline_completion_provider": "none"
+  "autosave": "on_window_change",
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 14,
+    "entry_spacing": "standard"
   },
-  "collaboration_panel": {
-    "button": false
+  "indent_guides": {
+    "enabled": true
   },
-  "scrollbar": {
-    "show": "never"
-  },
-  "notification_panel": {
-    "button": false
-  },
-  "terminal": {
-    "button": false
-  },
+  "show_whitespaces": "boundary",
+  "wrap_guides": [80, 100],
+  "preferred_line_length": 100,
+  // AI
   "assistant": {
     "version": "2",
-    "enabled": false,
-    "button": false
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    }
   },
+  // Language specific
   "languages": {
     "Python": {
       "language_servers": ["pyright"],
@@ -36,5 +38,24 @@
         }
       }
     }
+  },
+  // Hide unnecessary elements
+  "toolbar": {
+    "quick_actions": true,
+    "selections_menu": false
+  },
+  "chat_panel": { "button": "never" },
+  "scrollbar": { "show": "never" },
+  "collaboration_panel": { "button": false },
+  "notification_panel": { "button": false },
+  "git_panel": { "button": false },
+  "outline_panel": { "button": false },
+  "terminal": { "button": false },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "features": {
+    "inline_completion_provider": "none" // Hides co-pilot button
   }
 }

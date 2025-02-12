@@ -4,14 +4,14 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
-    pager = delta
+	pager = delta
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [delta]
-    navigate = true
-    side-by-side = true
+	navigate = true
+	side-by-side = true
 [merge]
-    conflictsstyle = diff3
+	conflictsstyle = diff3
 [alias]
 	amend = commit --amend 
 	logg = log --graph --all --decorate
@@ -19,6 +19,8 @@
 [pull]
 	rebase = true
 [diff]
-    colorMoved = default
+	colorMoved = default
 [push]
 	autoSetupRemote = true
+[commit]
+	verbose = true
