@@ -39,6 +39,18 @@
       }
     }
   },
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path_lookup": true,
+        "path": "/Users/jakub/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd",
+        "arguments": [
+          "--query-driver=/Users/jakub/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-*",
+          "--background-index"
+        ]
+      }
+    }
+  },
   // Hide unnecessary elements
   "toolbar": {
     "quick_actions": true,
@@ -56,6 +68,6 @@
     "show_tab_bar_buttons": false
   },
   "features": {
-    "inline_completion_provider": "none" // Hides co-pilot button
+    "edit_prediction_provider": "none" // Hides co-pilot button
   }
 }

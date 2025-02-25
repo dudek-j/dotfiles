@@ -5,6 +5,10 @@
 	excludesfile = ~/.gitignore
 	editor = nvim
 	pager = delta
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
 [interactive]
 	diffFilter = delta --color-only
 [delta]
@@ -13,9 +17,13 @@
 [merge]
 	conflictsstyle = diff3
 [alias]
-	amend = commit --amend 
+	amend = commit --amend
 	logg = log --graph --all --decorate
 	msg = log --pretty=%s
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 [pull]
 	rebase = true
 [diff]

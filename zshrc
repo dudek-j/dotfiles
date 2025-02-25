@@ -38,18 +38,18 @@ source ~/Code/dotfiles/scripts/gitgud.sh
 # Source idf if not available
 idf () {
   if ! [ -x "$(command -v idf.py)" ]; then
-    source ~/esp/esp-idf/export.sh
+    source ~/esp/export.sh
   else
-    echo 'Already sourced' >&2 
+    echo 'Already sourced' >&2
   fi
 }
 
 # Brew serach, filter with fzf, and download
 bsi () {
-  brew install $(brew search $1 | fzf ) 
+  brew install $(brew search $1 | fzf )
 }
 
-# fg nvim if 
+# fg nvim if
 n () {
   ps -o ppid -o comm= -o pid | grep "$$ nvim" | awk '{print $3}' | fg >/dev/null 2>&1 || nvim .
 }
@@ -72,6 +72,9 @@ alias ls="eza"
 
 # macOS
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+
+# Clangd
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # JDK
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
