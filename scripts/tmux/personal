@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+SESSION="personal"
+
+tmux new-session -d -s $SESSION
+tmux send-keys -t $SESSION "cd ~/Code/personal" C-m
+tmux switch-client -t $SESSION

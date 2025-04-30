@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+SESSION="app"
+
+tmux new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION "parakey-ios"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-ios" C-m
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION "parakey-android"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-android" C-m
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION "parakey-dev-tools"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-dev-tools" C-m
+
+tmux switch-client -t $SESSION

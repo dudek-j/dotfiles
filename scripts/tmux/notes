@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+SESSION="notes"
+
+tmux new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION "personal"
+tmux send-keys -t $SESSION "cd ~/Code/personal/notes" C-m
+tmux send-keys -t $SESSION "nvim personal.md" C-m
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION "work"
+tmux send-keys -t $SESSION "cd ~/Code/personal/notes/work" C-m
+tmux send-keys -t $SESSION "nvim notes.md" C-m
+
+tmux split-window -h -t $SESSION
+tmux send-keys -t $SESSION.1 "cd ~/Code/personal/notes/work" C-m
+tmux send-keys -t $SESSION.1 "nvim todo.md" C-m
+
+tmux switch-client -t $SESSION

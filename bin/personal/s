@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+SCRIPTS="/users/jakub/Code/dotfiles/scripts/tmux"
+SCRIPT=`ls $SCRIPTS | fzf`
+
+if tmux has-session -t $SCRIPT 2> /dev/null; then
+    tmux switch-client -t $SCRIPT
+    exit 0
+fi
+
+zsh $SCRIPTS/$SCRIPT

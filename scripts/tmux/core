@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+SESSION="core"
+
+tmux new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION "parakey-core"
+
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-core" C-m
+tmux send-keys -t $SESSION "ngrok start local" C-m
+
+tmux split-window -h -t $SESSION
+tmux send-keys -t $SESSION.1 "cd ~/Code/work/parakey-core/deployments/cloud" C-m
+tmux send-keys -t $SESSION.1 "npm run dev" C-m
+
+tmux split-window -h -t $SESSION
+tmux send-keys -t $SESSION.2 "cd ~/Code/work/parakey-core/deployments/parseserver" C-m
+tmux send-keys -t $SESSION.2 "npm run dev" C-m
+
+# Re-align panes
+tmux select-layout tiled
+
+tmux switch-client -t $SESSION
