@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+SESSION="sdk"
+
+tmux new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION "parakey-sdk-ios"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-sdk-ios" C-m
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION "parakey-sdk-android"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-sdk-android" C-m
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION "parakey-sdk-react-native"
+tmux send-keys -t $SESSION "cd ~/Code/work/parakey-sdk-react-native" C-m
+
+tmux switch-client -t $SESSION
