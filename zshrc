@@ -44,16 +44,6 @@ idf () {
   fi
 }
 
-# Brew serach, filter with fzf, and download
-bsi () {
-  brew install $(brew search $1 | fzf )
-}
-
-# fg nvim if
-n () {
-  ps -o ppid -o comm= -o pid | grep "$$ nvim" | awk '{print $3}' | fg >/dev/null 2>&1 || nvim .
-}
-
 # Kitty option-left/right
 bindkey "\e[1;3D" backward-word # ⌥←
 bindkey "\e[1;3C" forward-word # ⌥→
