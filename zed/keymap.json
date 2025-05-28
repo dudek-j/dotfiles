@@ -9,8 +9,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-b j": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-b l": ["workspace::ActivatePaneInDirection", "Right"]
+      "ctrl-b j": "workspace::ActivatePaneLeft",
+      "ctrl-b l": "workspace::ActivatePaneRight"
     }
   },
   {
@@ -18,6 +18,13 @@
     "bindings": {
       "ctrl-b shift-j": "pane::SplitLeft",
       "ctrl-b shift-l": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "enter": "editor::Newline",
+      "cmd-enter": "agent::Chat"
     }
   }
 ]

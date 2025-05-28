@@ -16,11 +16,12 @@
   "wrap_guides": [80, 100],
   "preferred_line_length": 100,
   // AI
-  "assistant": {
+  "agent": {
+    "default_profile": "ask",
     "version": "2",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "openai",
+      "model": "gpt-4.1"
     }
   },
   // Language specific
