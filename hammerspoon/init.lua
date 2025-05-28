@@ -25,7 +25,8 @@ local urls = {
     { text = "Github SDK React Native", url = "https://github.com/parakey-ab/parakey-sdk-react-native" },
     -- Tools
     { text = "Figma",                   url = "https://figma.com" },
-    { text = "Notion",                  url = "https://www.notion.so/parakey" }
+    { text = "Notion App Backlog",      url = "https://www.notion.so/parakey/App-team-backlog-b63b5857b47a40eba6054d67fd67a131" },
+    { text = "Notion Roadmap",          url = "https://www.notion.so/parakey/85af6595a54540cab010fb815a877a53?v=004477b35fd24b1d8b51495928440c08" }
 }
 
 
