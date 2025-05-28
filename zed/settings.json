@@ -17,7 +17,7 @@
   "preferred_line_length": 100,
   // AI
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "version": "2",
     "default_model": {
       "provider": "openai",
