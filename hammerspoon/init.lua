@@ -23,6 +23,10 @@ local urls = {
     { text = "Github SDK iOS",          url = "https://github.com/parakey-ab/parakey-sdk-ios" },
     { text = "Github SDK Android",      url = "https://github.com/parakey-ab/parakey-sdk-android" },
     { text = "Github SDK React Native", url = "https://github.com/parakey-ab/parakey-sdk-react-native" },
+    -- CircleCI
+    { text = "CircleCI iOS",            url = "https://app.circleci.com/pipelines/github/parakey-ab/parakey-ios" },
+    { text = "CircleCI Android",        url = "https://app.circleci.com/pipelines/github/parakey-ab/parakey-android" },
+    { text = "CircleCI Core",           url = "https://app.circleci.com/pipelines/github/parakey-ab/parakey-core" },
     -- Tools
     { text = "Figma",                   url = "https://figma.com" },
     { text = "Notion App Backlog",      url = "https://www.notion.so/parakey/App-team-backlog-b63b5857b47a40eba6054d67fd67a131" },
